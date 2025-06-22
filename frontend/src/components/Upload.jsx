@@ -45,6 +45,9 @@ const Upload = () => {
           <p className="text-slate-300 text-lg">
             Hide secret messages within images using Least Significant Bit encoding
           </p>
+          <p className="text-slate-300 text-lg" >
+            Please make sure to use an image in png or bmp format for optimal results. If not in this format convert it.
+          </p>
         </div>
 
 
@@ -171,7 +174,7 @@ const Upload = () => {
                 <div className="flex items-center justify-between p-3 bg-slate-800/30 rounded-lg">
                   <span className="text-slate-300">Original Image:</span>
                   <a
-                    href={`http://localhost:5000${result.original}`}
+                    href={`http://localhost:5001${result.original}`}
                     className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-lg transition-colors duration-200"
                   >
                     View Original
@@ -181,7 +184,7 @@ const Upload = () => {
                 <div className="flex items-center justify-between p-3 bg-slate-800/30 rounded-lg">
                   <span className="text-slate-300">Steganographic Image:</span>
                   <a
-                    href={`http://localhost:5000${result.stego}`}
+                    href={`http://localhost:5001${result.stego}`}
                     download
                     className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-lg transition-colors duration-200"
                   >
