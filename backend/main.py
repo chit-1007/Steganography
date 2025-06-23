@@ -21,9 +21,10 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['STATIC_FOLDER'] = STATIC_FOLDER
 
 # Enable CORS for React frontend
-CORS(app, origins=["http://localhost:3000",
-                   "https://steganography-jade.vercel.app/",
-                   ])
+CORS(app, resources={r"/api/*": {"origins": [
+    "http://localhost:3000",
+    "https://steganography-jade.vercel.app"
+]}}, supports_credentials=True)
 
 # Create directories if they don't exist
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
