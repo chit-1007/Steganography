@@ -114,7 +114,8 @@ def extract_message(image_path):
 # Your original routes
 @app.route("/")
 def home():
-    return "Backend is running!"
+    return render_template("index.html")
+
 
 @app.route("/edit", methods=["GET", "POST"])
 def edit():
