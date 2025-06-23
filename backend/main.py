@@ -22,7 +22,7 @@ app.config['STATIC_FOLDER'] = STATIC_FOLDER
 
 # Enable CORS for React frontend
 CORS(app, origins=["http://localhost:3000",
-                   "https://your-production-domain.com",
+                   "https://steganography-jade.vercel.app/",
                    ])
 
 # Create directories if they don't exist
