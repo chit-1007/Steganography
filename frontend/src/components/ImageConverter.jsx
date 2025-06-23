@@ -80,7 +80,7 @@ const ImageConverter = () => {
             formData.append('file', selectedFile);
             formData.append('operation', operation);
 
-            const response = await fetch('http://localhost:5001/api/convert', {
+            const response = await fetch('https://stegsecrets.onrender.com/api/convert', {
                 method: 'POST',
                 body: formData,
             });
@@ -125,9 +125,6 @@ const ImageConverter = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
-
-
-
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-8">
                     <h1 className="text-4xl font-bold text-gray-800 mb-2">
